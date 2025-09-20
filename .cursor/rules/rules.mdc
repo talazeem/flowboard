@@ -1,0 +1,64 @@
+---
+alwaysApply: true
+# Cursor Editor Rules for FlowBoard Project
+
+The following rules MUST be followed throughout the development process:
+
+---
+
+## 1. Development Rules
+
+1. **Design Patterns**
+   - Always double-check and apply the best-suited design pattern before implementing any feature.
+   - Justify architectural decisions in `ARCHITECTURE.md`.
+
+2. **UI Development Flow**
+   - Build UI incrementally, one feature at a time.
+   - After each feature is built:
+     - Provide a **testable UI snippet** for validation.
+     - Wait for confirmation before moving forward.
+
+3. **File Creation**
+   - Always ask for explicit confirmation before generating a **large set of files**.
+   - For small incremental additions, proceed only after validation.
+
+4. **Documentation Discipline**
+   - At the end of every logical feature implementation, automatically update:
+     - `PROJECT_STRUCTURE.md` (explaining the structure of the project, purpose of each folder, and key modules)
+     - `ARCHITECTURE.md` (detailing the design, architectural pattern, diagram of components and flows, technology justifications, state management strategy, component structure)
+
+5. **Testing**
+   - Ensure unit tests are written alongside features.
+   - Confirm test cases with the user before expanding.
+
+---
+
+## 2. Constraints (Strict)
+
+- **Framework**: React (TypeScript)  
+- **Styling**: Tailwind CSS  
+- **No external component libraries** (e.g., Material UI, shadcn, AntD).  
+- **No drag-drop libraries** (e.g., react-dnd, interact.js, konva.js).  
+- **Persistence Layer**: `localStorage` only.  
+- **Execution**: Must compile and run locally with `npm run start`.  
+- **Testing**: Unit tests required.  
+- **No external APIs** for tasks.
+
+---
+
+## 3. Confirmation Rules
+
+- Before implementing **large features** (e.g., drag-drop system, persistence layer), confirm with the user.
+- Always validate completed features with a **demo/test snippet**.
+- Never proceed with unverified or incomplete functionality.
+
+---
+
+## 4. Deliverables (Auto-Maintained)
+
+- `PROJECT_STRUCTURE.md`
+- `ARCHITECTURE.md`
+- `CHAT_HISTORY.md`
+- `TEST_STRATEGY.md`
+
+---
