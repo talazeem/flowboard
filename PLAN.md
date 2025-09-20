@@ -58,7 +58,7 @@ This living plan breaks development into verifiable UI milestones. After each mi
 - Add subtle transitions (hover, elevation, move) and visible focus rings.
 - Verification: Visual feel; keyboard flows for buttons; a11y attributes spot-check.
 
-#### M8 — Coverage and Refinement [status: pending]
+#### M8 — Coverage and Refinement [status: completed]
 - Raise Jest coverage > 80% across core behaviors.
 - Tidy code, comments (why, not how), and docs.
 - Verification: Coverage report and green test suite.
@@ -78,5 +78,6 @@ This living plan breaks development into verifiable UI milestones. After each mi
 
 ### Status Log
 - 2025-09-20: Plan created with agreed decisions and milestones. [status: active]
+- 2025-09-20: Implemented core features, docs, and tests; coverage thresholds enforced. [status: completed]
 
 

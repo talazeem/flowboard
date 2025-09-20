@@ -1,3 +1,74 @@
+### FlowBoard
+
+A lightweight Kanban-style board (Trello/Jira-inspired) built with React + TypeScript and Tailwind CSS. Focused on clear state management, native drag-and-drop, and strong tests/documentation.
+
+### Features
+- Three columns: To Do, In Progress, Done
+- Header “Create Task” modal to add tasks (title required)
+- Task details modal: edit title, change status (dropdown), delete (confirm)
+- Native mouse drag-and-drop across columns with cursor-following preview and dashed placeholder
+- Same-column reorder is disabled (by decision); cross-column moves only
+- Debounced localStorage persistence and hydration
+- Responsive, flexible columns with pleasant, minimal styling
+
+### Tech Stack
+- React (TypeScript), Tailwind CSS
+- Jest + React Testing Library
+
+### Requirements
+- Node 18+ and npm
+
+### Getting Started
+1) Install dependencies
+```bash
+npm install
+```
+
+2) Run the app
+```bash
+npm start
+```
+App runs at `http://localhost:3000`.
+
+3) Run tests (single run with coverage)
+```bash
+npm test
+```
+Coverage thresholds are enforced (80% global). A coverage summary is printed after the run.
+
+4) Build
+```bash
+npm run build
+```
+
+### Usage Tips
+- Create tasks via the header button.
+- Click a card to open details; update title or change status; Save/Cancel close the modal.
+- Hold a card for ~0.15s to start dragging; move across columns; drop to place.
+
+### Project Structure
+See `PROJECT_STRUCTURE.md` for an annotated folder breakdown. Highlights:
+- `src/BoardContext.tsx`: Context + reducer + debounced localStorage
+- `src/components/`: UI components (columns, cards, modals)
+- `src/dnd/`: Drag-and-drop provider and draggable wrappers
+
+### Architecture & Decisions
+Documented in `ARCHITECTURE.md`:
+- Context + reducer; debounced persistence to `flowboard.tasks`
+- Same-column reorder disabled per product decision; cross-column moves supported
+- A11y and minimal animation conventions
+
+### Testing Strategy
+Documented in `TEST_STRATEGY.md`:
+- Reducer unit tests, modal/component interaction tests
+- DnD integration tests (placeholder, cross-column move)
+
+### Roadmap / Good To Have
+Deferred enhancements are tracked in `goodToHave.md` (e.g., refined ghost preview, keyboard navigation, filters).
+
+### License
+MIT — see `LICENSE`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
